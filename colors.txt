@@ -1,0 +1,27 @@
+/* CSV */
+fffff0,f5f2ed,af95d7,ceadc8,ecc5b9,e0a9a8,d48c97,789ba4,8c9fc6
+
+/* With # */
+#fffff0, #f5f2ed, #af95d7, #ceadc8, #ecc5b9, #e0a9a8, #d48c97, #789ba4, #8c9fc6
+
+/* Array */
+["fffff0","f5f2ed","af95d7","ceadc8","ecc5b9","e0a9a8","d48c97","789ba4","8c9fc6"]
+
+/* Object */
+{"Ivory":"fffff0","Isabelline":"f5f2ed","Wisteria":"af95d7","Pink Lavender":"ceadc8","Baby Pink":"ecc5b9","Pastel Pink":"e0a9a8","Shimmering Blush":"d48c97","Pewter Blue":"789ba4","Wild Blue Yonder":"8c9fc6"}
+
+/* Extended Array */
+[{"name":"Ivory","hex":"fffff0","rgb":[255,255,240],"cmyk":[0,0,6,0],"hsb":[60,6,100],"hsl":[60,100,97],"lab":[100,-3,7]},{"name":"Isabelline","hex":"f5f2ed","rgb":[245,242,237],"cmyk":[0,1,3,4],"hsb":[37,3,96],"hsl":[37,29,95],"lab":[96,0,3]},{"name":"Wisteria","hex":"af95d7","rgb":[175,149,215],"cmyk":[19,31,0,16],"hsb":[264,31,84],"hsl":[264,45,71],"lab":[66,23,-30]},{"name":"Pink Lavender","hex":"ceadc8","rgb":[206,173,200],"cmyk":[0,16,3,19],"hsb":[311,16,81],"hsl":[311,25,74],"lab":[74,17,-9]},{"name":"Baby Pink","hex":"ecc5b9","rgb":[236,197,185],"cmyk":[0,17,22,7],"hsb":[14,22,93],"hsl":[14,57,83],"lab":[83,12,11]},{"name":"Pastel Pink","hex":"e0a9a8","rgb":[224,169,168],"cmyk":[0,25,25,12],"hsb":[1,25,88],"hsl":[1,47,77],"lab":[74,20,8]},{"name":"Shimmering Blush","hex":"d48c97","rgb":[212,140,151],"cmyk":[0,34,29,17],"hsb":[351,34,83],"hsl":[351,46,69],"lab":[66,29,5]},{"name":"Pewter Blue","hex":"789ba4","rgb":[120,155,164],"cmyk":[27,5,0,36],"hsb":[192,27,64],"hsl":[192,19,56],"lab":[62,-10,-9]},{"name":"Wild Blue Yonder","hex":"8c9fc6","rgb":[140,159,198],"cmyk":[29,20,0,22],"hsb":[220,29,78],"hsl":[220,34,66],"lab":[65,2,-22]}]
+
+/* XML */
+<palette>
+  <color name="Ivory" hex="fffff0" r="255" g="255" b="240" />
+  <color name="Isabelline" hex="f5f2ed" r="245" g="242" b="237" />
+  <color name="Wisteria" hex="af95d7" r="175" g="149" b="215" />
+  <color name="Pink Lavender" hex="ceadc8" r="206" g="173" b="200" />
+  <color name="Baby Pink" hex="ecc5b9" r="236" g="197" b="185" />
+  <color name="Pastel Pink" hex="e0a9a8" r="224" g="169" b="168" />
+  <color name="Shimmering Blush" hex="d48c97" r="212" g="140" b="151" />
+  <color name="Pewter Blue" hex="789ba4" r="120" g="155" b="164" />
+  <color name="Wild Blue Yonder" hex="8c9fc6" r="140" g="159" b="198" />
+</palette>

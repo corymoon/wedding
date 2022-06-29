@@ -1,5 +1,13 @@
 # Our Wedding Website
-I'd previously built this website with Vue and Buefy, but got on a Svelte kick and decided to completely rebuild it. Obviously now built with Svelte and using Tailwind CSS with DaisyUI.
+I'd previously built this website with Vue and Buefy, but got on a Svelte kick and decided to completely rebuild it. Obviously now built with Svelte and using Tailwind CSS with DaisyUI. Old website source is still available [here](https://github.com/corymoon/wedding-website-vue). Still uses Google Apps Script to submit email list form and RSVP form to Google Sheets.
+
+
+Moon icon in the navbar created by [Freepik at Flaticon](https://www.flaticon.com/free-icons/moon)
+
+
+#### Updates:
+##### 2022-06-29
+First deploy with minimal info. Save the date, and form to recieve updates via email.
 
 > # Svelte
 > 
