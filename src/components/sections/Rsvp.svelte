@@ -6,7 +6,7 @@
 </script>
 
 <PageSection ref="rsvp" title="You can RSVP here" lg>
-    <div class="mb-8 font-light">
+    <div class="mb-8 font-light text-center">
         {#if !canRsvp}
             <p class="mb-4">
                 ...but not yet. Once we send formal invitations, you'll be to
