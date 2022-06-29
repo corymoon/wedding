@@ -1,6 +1,6 @@
 <script>
     import { navFixed, toggleSections, canRsvp } from "../../toggles";
-    import { scrollTo } from "svelte-scrolling";
+    import { scrollTo, scrollTop } from "svelte-scrolling";
 
     import Menu from "../elements/icons/Menu.svelte";
     import NavItemLink from "../elements/NavItemLink.svelte";
@@ -74,10 +74,9 @@
             </div>
         {/if}
 
-        <!-- <a href="/" class="btn btn-ghost normal-case text-xl">Joni & Cory</a> -->
-        <a href="/" class="btn btn-ghost rounded-full opacity-70">
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <a on:click={() => scrollTop()} class="btn btn-ghost rounded-full opacity-70">
             <div class="rounded-full w-8">
-                <!-- <img src="https://api.lorem.space/image/face?hash=33791" /> -->
                 <img src="/moon.png" alt="Nav Logo" />
             </div>
         </a>
