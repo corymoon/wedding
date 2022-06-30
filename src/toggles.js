@@ -25,4 +25,4 @@ export let toggleSections = {
 export let showIndicators = false;
 
 // rsvp
-export let canRsvp = true;
+export let canRsvp = false;
