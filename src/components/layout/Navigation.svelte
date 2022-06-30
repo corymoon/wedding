@@ -100,3 +100,9 @@
         {/if}
     </div>
 </div>
+
+<style>
+    .text-white {
+        color: #FFFFFF;
+    }
+</style>
