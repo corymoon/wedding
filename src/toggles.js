@@ -6,9 +6,9 @@ export let toggleSections = {
     // save the date
     saveTheDate: true,
     // our story
-    story: false,
+    story: true,
     // photos
-    photos: false,
+    photos: true,
     // q & a
     qanda: false,
     // travel
@@ -25,4 +25,4 @@ export let toggleSections = {
 export let showIndicators = false;
 
 // rsvp
-export let canRsvp = false;
+export let canRsvp = true;

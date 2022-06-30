@@ -49,6 +49,11 @@
      */
     let bordered = false;
 
+    export /**
+     * @type {boolean}
+     */
+    let image = false;
+
     // md section
     // sm -> 3rem, 1.5rem  =  my-12 mx-6
     // lg -> 9rem, 4.5rem  =  lg:my-36 lg:mx-16
@@ -81,6 +86,7 @@
     class:border-error={bordered && raspberry}
     class:border-success={bordered && eucalyptus}
     class:border-warning={bordered && peach}
+    class:bg-image={image}
 >
     {#if title != undefined}
         <h2 class="text-center text-3xl font-serif font-semibold mb-8">
@@ -89,3 +95,12 @@
     {/if}
     <slot />
 </section>
+
+<style>
+    .bg-image {
+        background-image: url(/moon.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 250px;
+    }
+</style>

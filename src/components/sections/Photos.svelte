@@ -4,11 +4,11 @@
     let photos = [
         // "/photos/001.jpeg",
         // "/photos/002.jpeg",
-        "/photos/003.jpg",
+        // "/photos/003.jpg",
         "/photos/004.jpg",
         "/photos/005.jpeg",
         "/photos/006.jpeg",
-        "/photos/007.png",
+        // "/photos/007.png",
         "/photos/008.jpeg",
         "/photos/009.png",
     ];

@@ -3,4 +3,4 @@ export const formInputClasses =
 
 export const formLabelClasses = 'block uppercase tracking-wide text-xs font-bold mb-2';
 
-export const bgOpacity = '.20';
+export const paragraphClasses = "leading-10 text-lg font-light mb-8";

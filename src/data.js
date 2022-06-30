@@ -6,6 +6,7 @@ dayjs.extend(advancedFormat);
 export const parties = ['Joni', 'Cory'];
 export const city = 'Apple River, IL';
 export const weddingDay = dayjs('2023-10-08');
+export const rsvpCutoffDate = dayjs('2023-08-08');
 
 export let formatDate = function (date, format) {
     return date.format(format);
@@ -17,6 +18,18 @@ export const meals = [
     "Atlantic Salmon",
     "Vegetarian",
 ];
+
+export const guestMealsInitial = [
+    { name: null, meal: null },
+    { name: null, meal: null },
+    { name: null, meal: null },
+    { name: null, meal: null },
+    { name: null, meal: null },
+    { name: null, meal: null },
+];
+
+export const rsvpUrl =
+"https://script.google.com/macros/s/AKfycbzShgnqLPkKfJ-TCxgthCq2k-96J3ADIJcFQYoaIHaSwNRxgVnhEu1MHBHdjI8Xegqy/exec";
 
 export let lodging = [
     {
