@@ -62,19 +62,19 @@
     // sm -> 3rem, 1.5rem  =  my-12 mx-6
     // lg -> 18rem, 6rem  = lg:my-24 lg:mx-72
 
-    function marginClasses() {
+    function paddingClasses() {
         if (md) {
-            return "py-12 px-6 lg:py-36 lg:px-16";
+            return "py-12 px-6 md:py-24 md:px-11 lg:py-36 lg:px-16";
         }
         if (lg) {
-            return "py-12 px-6 lg:py-24 lg:px-72";
+            return "py-12 px-6 md:py-18 md:px-39 lg:py-24 lg:px-72";
         }
         return "";
     }
 </script>
 
 <section
-    class="{classes} {marginClasses()}"
+    class="{classes} {paddingClasses()}"
     use:scrollRef={ref}
     class:bg-primary={primary}
     class:bg-error={raspberry}

@@ -7,6 +7,8 @@ export let toggleSections = {
     saveTheDate: true,
     // our story
     story: false,
+    // events
+    events: false,
     // photos
     photos: true,
     // q & a

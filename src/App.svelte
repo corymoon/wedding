@@ -7,6 +7,7 @@
     // sections
     import SaveTheDate from "./components/sections/SaveTheDate.svelte";
     import OurStory from "./components/sections/OurStory.svelte";
+    import Events from "./components/sections/Events.svelte";
     import Photos from "./components/sections/Photos.svelte";
     import QAndA from "./components/sections/QAndA.svelte";
     import Travel from "./components/sections/Travel.svelte";
@@ -24,6 +25,9 @@
 {/if}
 {#if toggleSections.story}
     <OurStory />
+{/if}
+{#if toggleSections.events}
+     <Events />
 {/if}
 {#if toggleSections.photos}
     <Photos />

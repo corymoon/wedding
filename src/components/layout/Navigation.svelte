@@ -12,6 +12,12 @@
             href: "#our-story",
             display: toggleSections.story,
         },
+        // events
+        {
+            label: "Events",
+            href: "#events",
+            display: toggleSections.events,
+        },
         // photos
         {
             label: "Photos",

@@ -6,6 +6,9 @@ Moon icon in the navbar created by [Freepik at Flaticon](https://www.flaticon.co
 
 
 #### Updates:
+##### 2022-07-01
+Added events section for a day-of program, also toggleable in the `toggles.js` file.
+
 ##### 2022-06-29
 First deploy with minimal info. Save the date, and form to recieve updates via email.
 
