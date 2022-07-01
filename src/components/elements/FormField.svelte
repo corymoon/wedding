@@ -3,7 +3,7 @@
     export let data;
     export let label;
     export let min = 1;
-    export let max;
+    export let max = 6;
 
     import { formInputClasses, formLabelClasses } from "../../classes";
 </script>

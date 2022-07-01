@@ -1,13 +1,12 @@
 <script>
-    import { fade } from "svelte/transition";
-
-    import SuccessCheck from "../elements/icons/SuccessCheck.svelte";
-    import ErrorCross from "../elements/icons/ErrorCross.svelte";
     import FormField from "../elements/FormField.svelte";
     import GroupRadio from "../elements/GroupRadio.svelte";
+    import Alert from "../elements/Alert.svelte";
+    import FormButton from "../elements/FormButton.svelte";
+    import GuestMealInput from "../elements/GuestMealInput.svelte";
 
-    import { meals, lodging, rsvpUrl, guestMealsInitial } from "../../data";
-    import { emailListSubmitIsDisabled } from "../../functions";
+    import { lodging, rsvpUrl, guestMealsInitial } from "../../data";
+    import { rsvpSubmitIsDisabled } from "../../functions";
 
     let name = "";
     let email = "";
@@ -15,7 +14,7 @@
     let numGuests;
     let transportation = null;
     let guestMeals = guestMealsInitial;
-    let submitting = false;
+    let loading = false;
     let notificationMessage = null;
     let notificationClass = null;
     let showNotificationBox = false;
@@ -37,8 +36,8 @@
         transportation = null;
     }
 
-    function submitRsvpForm() {
-        submitting = true;
+    function click() {
+        loading = true;
         const form = document.forms["submit-rsvp-to-google-sheet"];
 
         fetch(rsvpUrl, { method: "POST", body: new FormData(form) })
@@ -48,7 +47,7 @@
                     "alert-success",
                     "Thanks! We've recieved your RSVP information."
                 );
-                submitting = false;
+                loading = false;
                 resetForm();
             })
             .catch((error) => {
@@ -57,20 +56,20 @@
                     "alert-error",
                     "Hmm... Something went wrong. Try again later."
                 );
-                submitting = false;
+                loading = false;
                 resetForm();
             });
     }
 
-    $: submitIsDisabled =
-        emailListSubmitIsDisabled(
+    $: disabled =
+        rsvpSubmitIsDisabled(
             name,
             email,
             phone,
             numGuests,
             guestMeals,
             transportation
-        ) || submitting;
+        ) || loading;
 
     $: yesRadioLabel = `Yes, ${
         numGuests == 1 || numGuests == null ? "I'd" : "We'd"
@@ -84,12 +83,7 @@
     </div>
     <div class="flex flex-wrap -mx-3 mb-4">
         <FormField bind:data={phone} label="Phone" fieldType="text" />
-        <FormField
-            bind:data={numGuests}
-            label="Guests"
-            fieldType="number"
-            max="6"
-        />
+        <FormField bind:data={numGuests} label="Guests" fieldType="number" />
     </div>
     <!-- transportation -->
     <p class="text-center mb-6">
@@ -123,48 +117,20 @@
             Your Party
         </p>
         {#each Array(numGuests) as _, index}
-            <div class="flex flex-wrap -mx-3 mb-4">
-                <FormField
-                    bind:data={guestMeals[index]["name"]}
-                    label="Guest {index + 1} name"
-                    fieldType="text"
-                />
-                <FormField
-                    fieldType="select"
-                    bind:data={guestMeals[index]["meal"]}
-                    label="Guest {index + 1} meal"
-                >
-                    {#each meals as meal}
-                        <option value={meal}>{meal}</option>
-                    {/each}
-                </FormField>
-            </div>
+            <GuestMealInput
+                bind:name={guestMeals[index]["name"]}
+                bind:meal={guestMeals[index]["meal"]}
+                {index}
+            />
         {/each}
     {/if}
-    <button
-        class="btn btn-success rounded-full w-full text-white"
-        class:loading={submitting}
-        disabled={submitIsDisabled}
-        on:click|preventDefault={submitRsvpForm}>Submit</button
-    >
+    <FormButton {loading} {disabled} {click} />
     {#if showNotificationBox}
-        <div transition:fade class="alert {notificationClass} shadow-lg mt-8">
-            <div>
-                {#if notificationClass == "alert-success"}
-                    <SuccessCheck />
-                {:else}
-                    <ErrorCross />
-                {/if}
-                <span>{notificationMessage}</span>
-            </div>
-            <div class="flex-none">
-                <button
-                    class="btn btn-sm btn-ghost"
-                    on:click|preventDefault={() =>
-                        (showNotificationBox = false)}>Close</button
-                >
-            </div>
-        </div>
+        <Alert
+            {notificationClass}
+            message={notificationMessage}
+            close={() => (showNotificationBox = false)}
+        />
     {/if}
 </form>
 

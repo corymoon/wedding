@@ -2,8 +2,10 @@
     import { navFixed, toggleSections, canRsvp } from "../../toggles";
     import { scrollTo, scrollTop } from "svelte-scrolling";
 
-    import Menu from "../elements/icons/Menu.svelte";
+    import MaterialIcon from "../elements/MaterialIcon.svelte";
     import NavItemLink from "../elements/NavItemLink.svelte";
+
+    let navIconSize = 28;
 
     let items = [
         // our story
@@ -65,7 +67,7 @@
             <div class="dropdown">
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label tabindex="0" class="btn btn-ghost lg:hidden">
-                    <Menu />
+                    <MaterialIcon icon="menu" />
                 </label>
                 <ul
                     tabindex="0"
@@ -83,7 +85,7 @@
         <!-- svelte-ignore a11y-missing-attribute -->
         <a on:click={() => scrollTop()} class="btn btn-ghost rounded-full opacity-70">
             <div class="rounded-full w-8">
-                <img src="/moon.png" alt="Nav Logo" />
+                <img src="/moon.png" height={navIconSize} width={navIconSize} alt="Nav Logo" />
             </div>
         </a>
     </div>

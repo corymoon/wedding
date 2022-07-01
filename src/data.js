@@ -1,12 +1,12 @@
 // @ts-nocheck
-import dayjs from 'dayjs';
-import advancedFormat from 'dayjs/plugin/advancedFormat.js';
+import dayjs from "dayjs";
+import advancedFormat from "dayjs/plugin/advancedFormat.js";
 dayjs.extend(advancedFormat);
 
-export const parties = ['Joni', 'Cory'];
-export const city = 'Apple River, IL';
-export const weddingDay = dayjs('2023-10-08');
-export const rsvpCutoffDate = dayjs('2023-08-08');
+export const parties = ["Joni", "Cory"];
+export const city = "Apple River, IL";
+export const weddingDay = dayjs("2023-10-08");
+export const rsvpCutoffDate = dayjs("2023-08-08");
 
 export let formatDate = function (date, format) {
     return date.format(format);
@@ -27,9 +27,11 @@ export const guestMealsInitial = [
     { name: null, meal: null },
     { name: null, meal: null },
 ];
+export const emailListUrl =
+    "https://script.google.com/macros/s/AKfycbyJ1aYZdxB-YtPVidSqKGKi8F3WhMoX7Em0J8RUrIE1bXq92yZoEf6zsJcM6cq8jXSOPw/exec";
 
 export const rsvpUrl =
-"https://script.google.com/macros/s/AKfycbzShgnqLPkKfJ-TCxgthCq2k-96J3ADIJcFQYoaIHaSwNRxgVnhEu1MHBHdjI8Xegqy/exec";
+    "https://script.google.com/macros/s/AKfycbzShgnqLPkKfJ-TCxgthCq2k-96J3ADIJcFQYoaIHaSwNRxgVnhEu1MHBHdjI8Xegqy/exec";
 
 export let lodging = [
     {
@@ -41,7 +43,7 @@ export let lodging = [
         street: "444 Eagle Ridge Dr",
         cityStateZip: "Galena, IL 61036",
         refName: "Meeder/Moon Wedding",
-        until: "August 1, 2023"
+        until: "August 1, 2023",
     },
     {
         id: "best-western",
@@ -52,6 +54,6 @@ export let lodging = [
         street: "9923 W US Route 20",
         cityStateZip: "Galena, IL 61036",
         refName: "Joni/Cory Wedding",
-        until: "September 15, 2023"
-    }
+        until: "September 15, 2023",
+    },
 ];

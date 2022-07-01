@@ -1,4 +1,4 @@
-export let emailListSubmitIsDisabled = function (
+export let rsvpSubmitIsDisabled = function (
     name,
     email,
     phone,
@@ -24,3 +24,11 @@ export let emailListSubmitIsDisabled = function (
         return false;
     }
 };
+
+export let emailListSubmitIsDisabled = function(name, email) {
+    if (name == "" || email == "" || name == null || email == null) {
+        return true;
+    } else {
+        return false;
+    }
+}
